@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="ChaosPlayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChaosPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		
+    </Grid>-->
+	<SplitView Name="MySplitView" OpenPaneLength="150" DisplayMode="CompactInline">
+		<SplitView.Pane>
+			<StackPanel>
+				<Button Name="OpenSplitButton" Background="White" FontSize="20" Margin="0,0,0,0" Width="48" Height="48" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Click="OpenSplitButton_Click">
+					
+				</Button>
+				<ListBox Name="Items" SelectionChanged="Items_SelectionChanged">
+					<ListBoxItem Name="PlayingItem">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock FontSize="20" Margin="2,2,0,0" FontFamily="Segoe MDL2 Assets" Text="&#xEC57;" ></TextBlock>
+							<TextBlock Text="正在播放" Margin="20,0,0,0" ></TextBlock>
+						</StackPanel>
+					</ListBoxItem>
+					<ListBoxItem Name="HistoryItem">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock FontSize="20" Margin="2,2,0,0" FontFamily="Segoe MDL2 Assets" Text="&#xE121;" ></TextBlock>
+							<TextBlock Text="播放记录" Margin="20,0,0,0" ></TextBlock>
+						</StackPanel>
+					</ListBoxItem>
+					<ListBoxItem Name="SettingItem">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock FontSize="20" Margin="2,2,0,0" FontFamily="Segoe MDL2 Assets" Text="&#xE115;" ></TextBlock>
+							<TextBlock Text="设置" Margin="20,0,0,0" ></TextBlock>
+						</StackPanel>
+					</ListBoxItem>
+					<ListBoxItem Name="FeedbackItem">
+						<StackPanel Orientation="Horizontal">
+							<TextBlock FontSize="20" Margin="2,2,0,0" FontFamily="Segoe MDL2 Assets" Text="&#xE170;" ></TextBlock>
+							<TextBlock Text="反馈" Margin="20,0,0,0" ></TextBlock>
+						</StackPanel>
+					</ListBoxItem>
+				</ListBox>
+			</StackPanel>
+		</SplitView.Pane>
+		<SplitView.Content>
+			<Frame Name="Content_Frame" x:FieldModifier="Public">
+				
+			</Frame>
+		</SplitView.Content>
+	</SplitView>
+</Page>

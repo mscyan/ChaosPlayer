@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="ChaosPlayer.HistoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChaosPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:ChaosPlayer.ClassLib"
+	mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40" />
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<RelativePanel Height="40" Background="Silver" Grid.Row="0">
+			<TextBlock RelativePanel.AlignLeftWithPanel="True" Text="历史记录" FontSize="20" Margin="10,5,0,0" />
+			<Button Name="ClearButton" Content="清除记录" Height="40" Click="ClearButton_Click" RelativePanel.AlignRightWithPanel="True"></Button>
+		</RelativePanel>
+
+		<GridView Grid.Row="1" Name="_gridView" Padding="10,20,0,0">
+
+		</GridView>
+	</Grid>
+</Page>

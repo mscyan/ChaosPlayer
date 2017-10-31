@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ChaosPlayer>
+	<VideoItem filename="EP02.mkv">
+		<path>E:\BaiduNetdiskDownload\EP02.mkv</path>
+		<position>00:00:00</position>
+		<duration>300.864</duration>
+		<thumbnail>C:\Users\CYAN\AppData\Local\Packages\e6948979-2a66-440e-9e94-efe9e79d1844_kg0tnge8xy822\LocalState\EP02.png</thumbnail>
+		<token>{12D38076-5530-4E89-8F3B-ADE64BEB2356}</token>
+	</VideoItem>
+	<VideoItem filename="EP02.mkv">
+		<path>E:\BaiduNetdiskDownload\EP02.mkv</path>
+		<position>00:00:00</position>
+		<duration>300.864</duration>
+		<thumbnail>C:\Users\CYAN\AppData\Local\Packages\e6948979-2a66-440e-9e94-efe9e79d1844_kg0tnge8xy822\LocalState\EP02.png</thumbnail>
+		<token>{12D38076-5530-4E89-8F3B-ADE64BEB2356}</token>
+	</VideoItem>
+	<VideoItem filename="daomengkongjian_1080p.mkv">
+		<path>E:\BaiduNetdiskDownload\daomengkongjian_1080p.mkv</path>
+		<position>00:00:00</position>
+		<duration>8888.018</duration>
+		<thumbnail>C:\Users\CYAN\AppData\Local\Packages\e6948979-2a66-440e-9e94-efe9e79d1844_kg0tnge8xy822\LocalState\daomengkongjian_1080p.png</thumbnail>
+		<token>{F2CD21F4-0FE0-48F1-975F-0A7AE1E05729}</token>
+	</VideoItem>
+	<VideoItem filename="疯狂动物城.mp4">
+		<path>E:\BaiduNetdiskDownload\疯狂动物城.mp4</path>
+		<position>00:00:00</position>
+		<duration>6235.0716666</duration>
+		<thumbnail>C:\Users\CYAN\AppData\Local\Packages\e6948979-2a66-440e-9e94-efe9e79d1844_kg0tnge8xy822\LocalState\疯狂动物城.png</thumbnail>
+		<token>{4291822C-5C53-4E0D-BFE0-4CD98FADA7C9}</token>
+	</VideoItem>
+	<VideoItem filename="心里的声音第二集.mkv">
+		<path>E:\BaiduNetdiskDownload\心里的声音第二集.mkv</path>
+		<position>00:00:00</position>
+		<duration>378.816</duration>
+		<thumbnail>C:\Users\CYAN\AppData\Local\Packages\e6948979-2a66-440e-9e94-efe9e79d1844_kg0tnge8xy822\LocalState\心里的声音第二集.png</thumbnail>
+		<token>{70CE4B75-A04C-49FE-A007-EFF82C5871E6}</token>
+	</VideoItem>
+	<VideoItem filename="EP02.mkv">
+		<path>E:\BaiduNetdiskDownload\EP02.mkv</path>
+		<position>00:00:00</position>
+		<duration>300.864</duration>
+		<thumbnail>C:\Users\CYAN\AppData\Local\Packages\e6948979-2a66-440e-9e94-efe9e79d1844_kg0tnge8xy822\LocalState\EP02.png</thumbnail>
+		<token>{12D38076-5530-4E89-8F3B-ADE64BEB2356}</token>
+	</VideoItem>
+	<VideoItem filename="疯狂动物城.mp4">
+		<path>E:\BaiduNetdiskDownload\疯狂动物城.mp4</path>
+		<position>00:00:00</position>
+		<duration>6235.0716666</duration>
+		<thumbnail>C:\Users\CYAN\AppData\Local\Packages\e6948979-2a66-440e-9e94-efe9e79d1844_kg0tnge8xy822\LocalState\疯狂动物城.png</thumbnail>
+		<token>{4291822C-5C53-4E0D-BFE0-4CD98FADA7C9}</token>
+	</VideoItem>
+</ChaosPlayer>

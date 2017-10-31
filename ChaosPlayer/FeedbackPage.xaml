@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="ChaosPlayer.FeedbackPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChaosPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+	
+	<!--此页面为反馈信息页面-->
+	<!--
+		类型：问题反馈，改善建议，其他
+		详细描述
+		QQ/手机号/邮箱
+		确认提交按钮
+	-->
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0" Height="40" Width="auto" Padding="10,5,0,0">
+			<TextBlock FontSize="20" Text="帮助与反馈"></TextBlock>
+		</StackPanel>
+		<StackPanel Grid.Row="1">
+			<TextBlock Margin="10,10,0,0" Text="对应用的建议和bug请发邮件到yanchao00001@outlook.com">
+				
+			</TextBlock>
+			
+		</StackPanel>
+    </Grid>
+</Page>
