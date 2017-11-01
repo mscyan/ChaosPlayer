@@ -34,13 +34,14 @@ namespace ChaosPlayer
 			
 			this.InitializeComponent();
 			Init();
-			Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
+			//Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
 		}
 
-		private void BackRequested(object sender, BackRequestedEventArgs e)
-		{
-			MainPage.Current.Frame.Navigate(typeof(MainPage));
-		}
+		//private void BackRequested(object sender, BackRequestedEventArgs e)
+		//{
+			
+		//	MainPage.Current.Frame.Navigate(typeof(MainPage));
+		//}
 
 		private async void UpdateItems(string thumbnail, string text1, string text2,string token)
 		{

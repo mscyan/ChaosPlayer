@@ -36,6 +36,7 @@ namespace ChaosPlayer
 		public PlayingPage()
 		{
 			this.InitializeComponent();
+
 			VideoSlider.CanDrag = false;
 
 			LoudSlider.Maximum = 10;
@@ -300,7 +301,7 @@ namespace ChaosPlayer
 				if(view.IsFullScreenMode==false)
 				{
 					view.TryEnterFullScreenMode();
-
+					FullScreenButton.Content = "\xE1D8";
 				}
 			}
 			if (int.Parse(adc.Values["isFullScreen"].ToString()) == 0)
@@ -309,6 +310,7 @@ namespace ChaosPlayer
 				if (view.IsFullScreenMode == true)
 				{
 					view.ExitFullScreenMode();
+					FullScreenButton.Content = "\xE1D9";
 				}
 			}
 		}
