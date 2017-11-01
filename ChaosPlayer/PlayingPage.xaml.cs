@@ -66,18 +66,27 @@ namespace ChaosPlayer
 
 				StorageFile video = await StorageApplicationPermissions.FutureAccessList.GetFileAsync(token);
 
-				var stream = await video.OpenAsync(FileAccessMode.ReadWrite);
+				var stream = await video.OpenAsync(FileAccessMode.Read);
 
 				mediaElement.SetSource(stream, video.ContentType);
-				StartOrPauseButton.Content = "\xE103";
-				mediaElement.Play();
+
+				if (InitVideoAutoPlay())
+				{
+					mediaElement.AutoPlay = true;
+					mediaElement.Play();
+					StartOrPauseButton.Content = "\xE103";
+				}
+				else
+				{
+					mediaElement.AutoPlay = false;
+					mediaElement.Play();
+					StartOrPauseButton.Content = "\xE102";
+				}
 
 				mediaElement.Volume = LoudSlider.Value / 20;
 
 				_this_main_video = new VideoSource();
-				
 			}
-
 		}
 
 		private void refreshSlider(object sender, object e)
@@ -125,11 +134,20 @@ namespace ChaosPlayer
 					imgStream.Dispose();
 					desStream.Dispose();
 
-					//dialog.ShowAsync();
-
 					mediaElement.SetSource(stream, video.ContentType);
-					StartOrPauseButton.Content = "\xE103";
-					mediaElement.Play();
+					
+					if (InitVideoAutoPlay())
+					{
+						mediaElement.AutoPlay = true;
+						mediaElement.Play();
+						StartOrPauseButton.Content = "\xE103";
+					}
+					else
+					{
+						mediaElement.AutoPlay = false;
+						mediaElement.Play();
+						StartOrPauseButton.Content = "\xE102";
+					}
 
 					mediaElement.Volume = LoudSlider.Value / 20;
 					_this_main_video = new VideoSource(video.Name, video.Path);
@@ -246,6 +264,9 @@ namespace ChaosPlayer
 					break;
 			}
 
+
+			InitVideoFullScreen();
+
 			TotalSeconds.Text = _this_main_video.Seconds;
 			TotalMinutes.Text = _this_main_video.Minutes;
 			TotalHours.Text = _this_main_video.Hours;
@@ -254,6 +275,43 @@ namespace ChaosPlayer
 			VideoSlider.Value = 0;
 
 			InitTimer();
+		}
+
+		private bool InitVideoAutoPlay()
+		{
+			ApplicationDataContainer adc = Windows.Storage.ApplicationData.Current.LocalSettings;
+			{
+				if(int.Parse(adc.Values["isAutoPlay"].ToString())==1)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+
+		private void InitVideoFullScreen()
+		{
+			ApplicationDataContainer adc = Windows.Storage.ApplicationData.Current.LocalSettings;
+			if (int.Parse(adc.Values["isFullScreen"].ToString()) == 1)
+			{
+				var view = ApplicationView.GetForCurrentView();
+				if(view.IsFullScreenMode==false)
+				{
+					view.TryEnterFullScreenMode();
+
+				}
+			}
+			if (int.Parse(adc.Values["isFullScreen"].ToString()) == 0)
+			{
+				var view = ApplicationView.GetForCurrentView();
+				if (view.IsFullScreenMode == true)
+				{
+					view.ExitFullScreenMode();
+				}
+			}
 		}
 
 		private void Page_SizeChanged(object sender, SizeChangedEventArgs e)

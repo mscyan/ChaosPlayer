@@ -35,7 +35,7 @@ namespace ChaosPlayer
 			Init();
 		}
 
-		private async void UpdateItems(string thumbnail, string text1, string text2)
+		private async void UpdateItems(string thumbnail, string text1, string text2,string token)
 		{
 			StackPanel stack = new StackPanel();
 			stack.Height = 125;
@@ -59,8 +59,9 @@ namespace ChaosPlayer
 			stack.Children.Add(tb1);
 			stack.Children.Add(tb2);
 			stack.Background = new SolidColorBrush(Windows.UI.Colors.Brown);
+			stack.Name = token;
 			_gridView.Items.Add(stack);
-			_gridView.ItemClick += GridView_ItemClick;
+			
 		}
 
 		private async Task Init()
@@ -71,14 +72,23 @@ namespace ChaosPlayer
 
 			foreach (var item in list)
 			{
-				UpdateItems(item.Thumbnail, item.Name, item.Position);
+				UpdateItems(item.Thumbnail, item.Name, item.Position,item.Token);
+				_gridView.IsItemClickEnabled = true;
+				_gridView.ItemClick += GridView_ItemClick;
+			}
+			if(list.Count==0)
+			{
+				TextBlock tb = new TextBlock();
+				tb.Text = "暂无播放记录";
+				tb.FontSize = 15;
+				_gridView.Items.Add(tb);
 			}
 		}
 
 		private void GridView_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			var video = (VideoSource)e.ClickedItem;
-			string token = video.Token;
+			StackPanel video = (StackPanel)e.ClickedItem;
+			string token = video.Name;
 
 			MainPage.Current.Frame.Navigate(typeof(PlayingPage),token);
 		}
@@ -89,7 +99,14 @@ namespace ChaosPlayer
 			SearchVideo.ClearHistoryAsync();
 
 			var items = _gridView.Items;
-			_gridView.Items.Clear();
+			if(items.First().GetType()==typeof(TextBlock))
+			{
+				// do nothing
+			}
+			else
+			{
+				_gridView.Items.Clear();
+			}
 		}
 
 		/// <summary>

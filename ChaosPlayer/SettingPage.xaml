@@ -21,6 +21,7 @@
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="auto" />
+			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>
 		<StackPanel Grid.Row="0" Height="40" Background="#ccc">
 			<TextBlock Text="设置" FontSize="20" Margin="20,5,0,0" Height="30" >
@@ -49,7 +50,7 @@
 						 GroupName="_rb_isOrNotAutoPlay"/>
 			</StackPanel>
 		</StackPanel>
-		<StackPanel Grid.Row="3" Name="ColorStyle" Margin="25,10,0,10">
+		<!--<StackPanel Grid.Row="3" Name="ColorStyle" Margin="25,10,0,10">
 			<TextBlock Text="主题背景"></TextBlock>
 			<ToggleSwitch>
 				<ToggleSwitch.OnContent>
@@ -59,8 +60,8 @@
 					<TextBlock Text="亮"></TextBlock>
 				</ToggleSwitch.OffContent>
 			</ToggleSwitch>
-		</StackPanel>
-		<StackPanel Grid.Row="4" Name="isLucency" Margin="25,10,0,10">
+		</StackPanel>-->
+		<!--<StackPanel Grid.Row="4" Name="isLucency" Margin="25,10,0,10">
 			<TextBlock Text="透明磁贴"></TextBlock>
 			<ToggleSwitch>
 				<ToggleSwitch.OnContent>
@@ -70,14 +71,22 @@
 					<TextBlock Text="关"></TextBlock>
 				</ToggleSwitch.OffContent>
 			</ToggleSwitch>
-		</StackPanel>
+		</StackPanel>-->
 
 		<StackPanel Grid.Row="5" Margin="25,10,0,10">
 			<Button Name="SaveButton" Background="Teal" Content="保存" Click="SaveButton_Click"></Button>
 		</StackPanel>
 		
 		<StackPanel Grid.Row="6" Name="s" Margin="30,10,0,10">
-			<HyperlinkButton Content="关于"></HyperlinkButton>
+			<HyperlinkButton Content="关于" Click="HyperlinkButton_Click"></HyperlinkButton>
 		</StackPanel>
+
+		<Frame Name="AboutMeFrame" Grid.Row="7" Visibility="Collapsed">
+			<StackPanel Margin="30,10,10,10">
+				<TextBlock Text="开发人员：颜超"></TextBlock>
+				<TextBlock Text="版本：1.0"></TextBlock>
+				<TextBlock Text="有建议可以发送至我的邮箱"></TextBlock>
+			</StackPanel>
+		</Frame>
     </Grid>
 </Page>

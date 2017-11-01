@@ -25,6 +25,7 @@ namespace ChaosPlayer
 		public FeedbackPage()
 		{
 			this.InitializeComponent();
+			
 		}
 	}
 }

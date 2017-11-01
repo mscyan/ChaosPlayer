@@ -16,10 +16,11 @@ namespace ChaosPlayer
 		public static MainPage Current;
         public MainPage()
         {
+
             this.InitializeComponent();
 			Current = this;
 			ApplicationInitialize();
-			
+			Content_Frame.Navigate(typeof(HistoryPage));
         }
 
 		/// <summary>

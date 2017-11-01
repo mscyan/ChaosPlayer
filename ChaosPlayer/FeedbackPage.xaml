@@ -20,14 +20,12 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 
-		<StackPanel Grid.Row="0" Height="40" Width="auto" Padding="10,5,0,0">
+		<StackPanel Background="Silver" Grid.Row="0" Height="40" Width="auto" Padding="10,5,0,0">
 			<TextBlock FontSize="20" Text="帮助与反馈"></TextBlock>
 		</StackPanel>
 		<StackPanel Grid.Row="1">
-			<TextBlock Margin="10,10,0,0" Text="对应用的建议和bug请发邮件到yanchao00001@outlook.com">
-				
-			</TextBlock>
-			
+			<TextBlock Margin="10,10,0,0" Text="对应用的建议和bug请发邮件到yanchao00001@outlook.com"></TextBlock>
+			<TextBlock Margin="10,10,0,0" Text="对视频格式、界面、功能方面有需求都可以联系我"></TextBlock>
 		</StackPanel>
     </Grid>
 </Page>
