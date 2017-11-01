@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using Windows.Storage.AccessCache;
 using Windows.UI.ViewManagement;
+using Windows.UI.Core;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -54,9 +55,7 @@ namespace ChaosPlayer
 
 		protected override async void OnNavigatedTo(NavigationEventArgs e)
 		{
-
 			base.OnNavigatedTo(e);
-			
 			if (e.Parameter != null)
 			{
 				//播放记录页面跳转过来，不需要将播放记录添加到xml中，只需要获取token
@@ -370,16 +369,10 @@ namespace ChaosPlayer
 
 		private void StackPanel_RightTapped(object sender, RightTappedRoutedEventArgs e)
 		{
-			ContentDialog dia = new ContentDialog();
-			dia.SecondaryButtonText = "hello";
-			dia.ShowAsync();
 		}
 
 		private void RelativePanel_RightTapped(object sender, RightTappedRoutedEventArgs e)
 		{
-			ContentDialog dia = new ContentDialog();
-			dia.SecondaryButtonText = "ha";
-			dia.ShowAsync();
 		}
 	}
 }

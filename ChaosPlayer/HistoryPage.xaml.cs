@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using Windows.Storage;
+using Windows.UI.Core;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -33,6 +34,12 @@ namespace ChaosPlayer
 			
 			this.InitializeComponent();
 			Init();
+			Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += BackRequested;
+		}
+
+		private void BackRequested(object sender, BackRequestedEventArgs e)
+		{
+			MainPage.Current.Frame.Navigate(typeof(MainPage));
 		}
 
 		private async void UpdateItems(string thumbnail, string text1, string text2,string token)
@@ -90,7 +97,7 @@ namespace ChaosPlayer
 			StackPanel video = (StackPanel)e.ClickedItem;
 			string token = video.Name;
 
-			MainPage.Current.Frame.Navigate(typeof(PlayingPage),token);
+			MainPage.Current.Frame.Navigate(typeof(PlayingPage), token);
 		}
 
 

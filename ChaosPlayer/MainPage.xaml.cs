@@ -18,10 +18,10 @@ namespace ChaosPlayer
         {
 
             this.InitializeComponent();
-			Current = this;
 			ApplicationInitialize();
 			Content_Frame.Navigate(typeof(HistoryPage));
-        }
+			Current = this;
+		}
 
 		/// <summary>
 		/// 应用初始化工作。
